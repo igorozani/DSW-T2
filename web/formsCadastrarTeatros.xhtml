@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Sistema de Gerenciamento</title>
+        <h:outputStylesheet library="css" name="estilo.css"/>
+    </h:head>
+    <h:body>
+    <div class="layout-body">
+        <h1>Cadastro de Sites</h1>
+           <div class="container1">
+       
+            <h2><div class="container1head">Adicione Novo Teatro</div></h2>
+            
+            <h:form>
+                
+            <h:panelGrid columns="3">
+                Email:
+                <h:inputText id="email" label="Nome" required="true" 
+                             value="#{novoPalpite.dadosPalpite.palpiteiro.nome}" />
+                <h:message for="nome"/> <br/>
+
+                Senha: 
+                <h:inputText id="senha" label="E-mail" required="true" 
+                             validator="#{novoPalpite.validarEmail}" 
+                             value="#{novoPalpite.dadosPalpite.palpiteiro.email}" />
+                <h:message for="email"/> <br/>
+
+
+                CNPJ:
+                <h:inputText id="cnpj" label="Telefone" required="true" 
+                             value="#{novoPalpite.dadosPalpite.palpiteiro.telefone}" />
+                <h:message for="telefone"/> <br/>
+
+                Nome:
+                <h:inputText id="nome" label="Telefone" required="true" 
+                             value="#{novoPalpite.dadosPalpite.palpiteiro.telefone}" />
+                <h:message for="dataDeNascimento"/> <br/>
+
+
+                Cidade:
+                <h:inputText id="cidade" label="Telefone" required="true" 
+                             value="#{novoPalpite.dadosPalpite.palpiteiro.telefone}" />
+                <h:message for="dataDeNascimento"/> <br/>
+                
+            </h:panelGrid>
+            <br/>
+            <h:commandButton id="submit" value="Submit" action="confirmarPalpite" />
+            </h:form>
+            
+            </div>   
+    </div>    
+             
+        
+    </h:body>
+</html>
+
