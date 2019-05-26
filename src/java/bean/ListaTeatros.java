@@ -56,7 +56,7 @@ public class ListaTeatros implements Serializable {
     }
 
     public String volta() {
-        return "/index.xhtml?faces-redirect=true";
+        return "index.xhtml?faces-redirect=true";
     }
     
     private List<Teatro> listaTeatros;
