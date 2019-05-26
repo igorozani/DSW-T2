@@ -19,35 +19,34 @@
             <h:panelGrid columns="3">
                 Email:
                 <h:inputText id="email" label="Nome" required="true" 
-                             value="#{novoPalpite.dadosPalpite.palpiteiro.nome}" />
+                             value="#{siteBean.site.email}" />
                 <h:message for="nome"/> <br/>
 
                 Senha: 
                 <h:inputText id="senha" label="E-mail" required="true" 
-                             validator="#{novoPalpite.validarEmail}" 
-                             value="#{novoPalpite.dadosPalpite.palpiteiro.email}" />
+                             value="#{siteBean.site.senha}" />
                 <h:message for="email"/> <br/>
 
 
                 URL:
                 <h:inputText id="url" label="Telefone" required="true" 
-                             value="#{novoPalpite.dadosPalpite.palpiteiro.telefone}" />
+                             value="#{siteBean.site.url}" />
                 <h:message for="telefone"/> <br/>
 
                 Nome:
                 <h:inputText id="nome" label="Telefone" required="true" 
-                             value="#{novoPalpite.dadosPalpite.palpiteiro.telefone}" />
+                             value="#{siteBean.site.nome}" />
                 <h:message for="dataDeNascimento"/> <br/>
 
 
                 Telefone:
                 <h:inputText id="telefone" label="Telefone" required="true" 
-                             value="#{novoPalpite.dadosPalpite.palpiteiro.telefone}" />
+                             value="#{siteBean.site.telefone}" />
                 <h:message for="dataDeNascimento"/> <br/>
                 
             </h:panelGrid>
             <br/>
-            <h:commandButton id="submit" value="Submit" action="confirmarPalpite" />
+            <h:commandButton id="submit" value="Submit" action="#{siteBean.salva()}" />
             </h:form>
             
             </div>   

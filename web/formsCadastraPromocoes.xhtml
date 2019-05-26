@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sistema de Gerenciamento</title>
+        <h:outputStylesheet library="css" name="estilo.css"/>
+    </h:head>
+    <h:body>
+    <div class="layout-body">
+        <h1>Cadastro de Promocoes</h1>
+           <div class="container1">
+       
+            <h2><div class="container1head">Adicione Nova Promoção</div></h2>
+            
+            <h:form>
+                
+            <h:panelGrid columns="3">
+                
+                URL:
+                <h:inputText id="url" label="Url" required="true" 
+                             value="#{promocaoBean.promocao.url}" />
+                <h:message for="telefone"/> <br/>
+
+                CNPJ:
+                <h:inputText id="cnpj" label="Nome" required="true" 
+                             value="#{promocaoBean.promocao.cnpj}" />
+                <h:message for="dataDeNascimento"/> <br/>
+
+
+                Nome:
+                <h:inputText id="nome" label="Telefone" required="true" 
+                             value="#{promocaoBean.promocao.nome_peca}" />
+                <h:message for="dataDeNascimento"/> <br/>
+                
+                Preco:
+                <h:inputText id="preco" label="Preco" required="true" 
+                             value="#{promocaoBean.promocao.preco}" />
+                <h:message for="dataDeNascimento"/> <br/>
+                
+                Data:
+                <h:inputText id="data" label="Data" required="true" 
+                             value="#{promocaoBean.promocao.dia_hora}" converterMessage="dd-mm-YYYY HH:MM">
+                             <f:convertDateTime pattern="dd-mm-YYYY HH:MM" />
+                </h:inputText>
+                <br/>
+                
+                
+                
+            </h:panelGrid>
+            <br/>
+            <h:commandButton id="submit" value="Submit" action="#{promocaoBean.salva()}" />
+            </h:form>
+            
+            </div>   
+    </div>    
+             
+        
+    </h:body>
+</html>

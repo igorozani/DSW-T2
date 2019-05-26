@@ -23,17 +23,17 @@ import pojo.Teatro;
 
 @ManagedBean
 @SessionScoped
-public class ListaPromocao implements Serializable {
+public class PromocaoBean implements Serializable {
 
-    private Promocao promocao;
+    private Promocao promocao = new Promocao();
 
     public String lista() {
         return "promo/index.xhtml";
     }
 
     public String cadastra() {
-        promocao = new Promocao();
-        return "form.xhtml";
+        
+        return "formsCadastraPromocoes.xhtml";
     }
 
     public String edita(Long id) {

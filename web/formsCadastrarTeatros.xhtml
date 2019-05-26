@@ -9,7 +9,7 @@
     </h:head>
     <h:body>
     <div class="layout-body">
-        <h1>Cadastro de Sites</h1>
+        <h1>Cadastro de Teatros</h1>
            <div class="container1">
        
             <h2><div class="container1head">Adicione Novo Teatro</div></h2>
@@ -19,7 +19,7 @@
             <h:panelGrid columns="3">
                 Email:
                 <h:inputText id="email" label="Email" required="true" 
-                             value="#{listaTeatros.teatro.email}" >
+                             value="#{teatroBean.teatro.email}" >
                 <f:validateRequired/>
                 </h:inputText>
                 <h:message for="nome"/> <br/>
@@ -27,7 +27,7 @@
                 Senha: 
                 <h:inputText id="senha" label="Senha" required="true" 
                               
-                             value="#{listaTeatros.teatro.senha}" >
+                             value="#{teatroBean.teatro.senha}" >
                 <f:validateRequired/>
                 </h:inputText>
                 <h:message for="email"/> <br/>
@@ -35,14 +35,14 @@
 
                 CNPJ:
                 <h:inputText id="cnpj" label="CNPJ" required="true" 
-                             value="#{listaTeatros.teatro.cnpj}" >
+                             value="#{teatroBean.teatro.cnpj}" >
                 <f:validateRequired/>
                 </h:inputText>
                 <h:message for="telefone"/> <br/>
 
                 Nome:
                 <h:inputText id="nome" label="Nome" required="true" 
-                             value="#{listaTeatros.teatro.nome}" >
+                             value="#{teatroBean.teatro.nome}" >
                 <f:validateRequired/>
                 </h:inputText>
                 <h:message for="dataDeNascimento"/> <br/>
@@ -50,14 +50,14 @@
 
                 Cidade:
                 <h:inputText id="cidade" label="Cidade" required="true" 
-                             value="#{listaTeatros.teatro.cidade}" >
+                             value="#{teatroBean.teatro.cidade}" >
                 <f:validateRequired/>
                 </h:inputText>
                 <h:message for="dataDeNascimento"/> <br/>
                 
             </h:panelGrid>
             <br/>
-            <h:commandButton  id="submit" value="Submit" action="#{listaTeatros.salva()}" />
+            <h:commandButton  id="submit" value="Submit" action="#{teatroBean.salva()}" />
             </h:form>
             
             </div>   

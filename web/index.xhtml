@@ -13,8 +13,9 @@
         <nav>
           <h:form>  
           <ul>
-              <li> <h:commandLink action="#{listaTeatros.cadastra()}">Cadastrar Site</h:commandLink></li>
-            <li> <h:commandLink action="#{listaTeatros.cadastra()}">Cadastrar Teatro</h:commandLink></li>
+              <li> <h:commandLink action="#{promocaoBean.cadastra()}">Cadastrar Promocoao</h:commandLink></li>
+              <li> <h:commandLink action="#{siteBean.cadastra()}">Cadastrar Site</h:commandLink></li>
+              <li> <h:commandLink action="#{teatroBean.cadastra()}">Cadastrar Teatro</h:commandLink></li>
             <li> <a href="">Login</a></li>
           </ul>
           </h:form> 
@@ -24,8 +25,8 @@
      <div class="layout-body">
 
      <h:form>
-            <h:commandLink action="#{listaTeatros.verTodosTeatros()}">Ver Teatros</h:commandLink><br/>
-            <h:commandLink action="#{listaPromocao.verTodasPromocoes()}">Ver Promocoes</h:commandLink><br/><br/><br/>
+            <h:commandLink action="#{teatroBean.verTodosTeatros()}">Ver Teatros</h:commandLink><br/>
+            <h:commandLink action="#{promocaoBean.verTodasPromocoes()}">Ver Promocoes</h:commandLink><br/><br/><br/>
             <h:commandLink action="#{listaPalpites.verTodosPalpites()}">CRUD TEATROS</h:commandLink><br/>
             <h:commandLink action="#{listaPalpites.verTodosPalpites()}">CRUD SITES</h:commandLink><br/>
      </h:form>

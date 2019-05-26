@@ -5,12 +5,15 @@
  */
 package bean;
 
+import dao.GenericDAO;
+import dao.SiteDAO;
 import dao.TeatroDAO;
 import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import pojo.Site;
 import pojo.Teatro;
 
 /**
@@ -20,9 +23,9 @@ import pojo.Teatro;
 
 @ManagedBean
 @RequestScoped
-public class ListaTeatros implements Serializable {
+public class SiteBean implements Serializable {
     
-    private Teatro teatro = new Teatro();
+    private Site site = new Site();
        
     public String lista() {
         return "livro/index.xhtml";
@@ -30,28 +33,28 @@ public class ListaTeatros implements Serializable {
 
     public String cadastra() {
        
-        return "formsCadastrarTeatros.xhtml";
+        return "formsCadastrarSites.xhtml";
     }
 
     public String edita(Long id) {
-        TeatroDAO dao = new TeatroDAO();
-        teatro = dao.get(id);
+        SiteDAO dao = new SiteDAO();
+        site = dao.get(id);
         return "form.xhtml";
     }
 
     public String salva() {
-         TeatroDAO dao = new TeatroDAO();
-        if (teatro.getId() == null) {
-            dao.save(teatro);
+        SiteDAO dao = new SiteDAO();
+        if (site.getId() == null) {
+            dao.save(site);
         } else {
-            dao.update(teatro);
+            dao.update(site);
         }
         return "index.xhtml?faces-redirect=true";
     }
 
     public String delete(Teatro teatro) {
-         TeatroDAO dao = new TeatroDAO();
-        dao.delete(teatro);
+        SiteDAO dao = new SiteDAO();
+        dao.delete(site);
         return "index.xhtml";
     }
 
@@ -59,26 +62,27 @@ public class ListaTeatros implements Serializable {
         return "index.xhtml?faces-redirect=true";
     }
     
-    private List<Teatro> listaTeatros;
+    private List<Site> listaSites;
     
-   public Teatro getTeatro(){
-       return teatro;
+   public Site getSite(){
+       return site;
    }
 
-    public List<Teatro> getListaTeatros() {
-        return listaTeatros;
+    public List<Site> getListaSites() {
+        return listaSites;
     }
 
-    public String verTodosTeatros() throws SQLException {
-        TeatroDAO teatroDAO = new TeatroDAO();
-        listaTeatros = teatroDAO.getAll();
-        return "listaTeatros";
+    public String verTodosSites() throws SQLException {
+        SiteDAO dao = new SiteDAO();
+        listaSites = dao.getAll();
+        return "listaSites";
     }
     
-    public String verTodosTeatros(String cidade) throws SQLException {
+   /* public String verTodosTeatros(String cidade) throws SQLException {
         TeatroDAO teatroDAO = new TeatroDAO();
         listaTeatros = teatroDAO.getAllPorCidade(cidade);
         return "listaTeatros";
-    }
+    } */
+    
     
 }
