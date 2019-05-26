@@ -24,19 +24,19 @@ public class TeatroBean implements Serializable {
     
     private Teatro teatro = new Teatro();
        
-    public String lista() {
+   /* public String lista() {
         return "livro/index.xhtml";
-    }
+    }*/
 
     public String cadastra() {
        
         return "formsCadastrarTeatros.xhtml";
     }
 
-    public String edita(Long id) {
+    public String editaTeatro(Long id) {
         TeatroDAO dao = new TeatroDAO();
         teatro = dao.get(id);
-        return "form.xhtml";
+        return "formsCadastrarTeatros.xhtml";
     }
 
     public String salva() {

@@ -59,9 +59,8 @@ and open the template in the editor.
                     <h:outputText id="Data" value="#{promocao.dia_hora}">
                      <f:convertDateTime pattern="dd-MM-YYYY HH:MM" />
                     </h:outputText>
-                   
                 </h:column>
-                
+                                
             </h:dataTable>  
         </h:form>
            
@@ -70,10 +69,6 @@ and open the template in the editor.
      
         
     </div>
-        <h:form>
-            <h:commandLink action="novoPalpite">Fazer um palpite</h:commandLink><br/>
-            <h:commandLink action="#{listaPalpites.verTodosPalpites()}">Ver todos os palpites</h:commandLink><br/>
-            <h:commandLink action="#{listaPalpites.verTodosPalpites('Palmeiras')}">Ver todos os palpites envolvendo o Palmeiras</h:commandLink><br/>
-        </h:form>
+        
     </h:body>
 </html>

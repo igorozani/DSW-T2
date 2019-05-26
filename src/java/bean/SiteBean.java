@@ -39,7 +39,7 @@ public class SiteBean implements Serializable {
     public String edita(Long id) {
         SiteDAO dao = new SiteDAO();
         site = dao.get(id);
-        return "form.xhtml";
+        return "formsCadastrarSites.xhtml";
     }
 
     public String salva() {
@@ -52,7 +52,7 @@ public class SiteBean implements Serializable {
         return "index.xhtml?faces-redirect=true";
     }
 
-    public String delete(Teatro teatro) {
+    public String delete(Site site) {
         SiteDAO dao = new SiteDAO();
         dao.delete(site);
         return "index.xhtml";

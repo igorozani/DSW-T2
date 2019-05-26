@@ -39,7 +39,7 @@ public class PromocaoBean implements Serializable {
     public String edita(Long id) {
         PromocaoDAO dao = new PromocaoDAO();
         promocao = dao.get(id);
-        return "form.xhtml";
+        return "formsCadastrarPromocoes.xhtml";
     }
 
     public String salva() {

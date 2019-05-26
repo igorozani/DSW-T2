@@ -1,5 +1,10 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
@@ -19,48 +24,45 @@
 
      
         <div class="container-esquerdo-principal">
-          <h2><a>Teatros</a></h2>
-          
-          Filtrar por cidade  
+          <h2><a>Sites</a></h2>
+         
           
           <h:form class="table-teatro" >
-            <h:dataTable id="teatros" 
-                         summary="Lista de Teatros"
-                         value="#{teatroBean.listaTeatros}"
-                         var="teatro"
+            <h:dataTable id="sites" 
+                         summary="Lista de Sites"
+                         value="#{siteBean.listaSites}"
+                         var="site"
                          class="thead-teatro">
                 <h:column >
                     <f:facet name="header" class="thead-teatro">
                         <h:outputText value="Nome"  class="thead-teatro-li"/>
                     </f:facet>
-                    <h:outputText id="nomeTeatro" value="#{teatro.nome}" />
+                    <h:outputText id="nomeSite" value="#{site.nome}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header" class="thead-teatro">
-                        <h:outputText value="Cidade" class="thead-teatro-li" />
+                        <h:outputText value="email" class="thead-teatro-li" />
                     </f:facet>
-                    <h:outputText id="teatroCidade" value="#{teatro.cidade}" />
+                    <h:outputText id="siteEmail" value="#{site.email}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header" class="thead-teatro">
-                        <h:outputText value="Email" class="thead-teatro-li"/>
+                        <h:outputText value="url" class="thead-teatro-li"/>
                     </f:facet>
-                    <h:outputText id="teatroEmail" value="#{teatro.email}" />
+                    <h:outputText id="siteURL" value="#{site.url}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header" class="thead-teatro">
-                        <h:outputText value="CNPJ" class="thead-teatro-li"/>
+                        <h:outputText value="Telefone" class="thead-teatro-li"/>
                     </f:facet>
-                    <h:outputText id="teatroCNPJ" value="#{teatro.cnpj}" />
+                    <h:outputText id="teatroCNPJ" value="#{site.telefone}" />
                 </h:column>
-                 <h:column> 
-                     <f:facet name="header"></f:facet>  
-                     <h:commandLink action="#{teatroBean.editaTeatro(teatro.id)}" value="Editar" >  
+                 <h:column>  
+                    <h:commandLink action = "#{siteBean.edita(site.id)}" value="Editar" >  
                     </h:commandLink>  
                 </h:column>  
                 <h:column>  
-                    <f:facet name="header"></f:facet>  
-                    <h:commandLink action="#{teatroBean.delete(teatro)}" value="Deletar" >  
+                    <h:commandLink action = "#{siteBean.delete(site)}" value="Deletar" >  
                     </h:commandLink>  
                 </h:column>
             </h:dataTable>  
@@ -68,6 +70,6 @@
 
         </div>
     </div>
-       
+        
     </h:body>
 </html>
