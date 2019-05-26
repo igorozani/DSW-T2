@@ -16,13 +16,7 @@ and open the template in the editor.
     <div class="div-header">
         <h1>Gerenciamento de Sites e Teatros</h1>
         <nav>
-          <h:form>  
-          <ul>
-            <li> <h:commandLink action="formsCadastrarSites">Cadastrar Site</h:commandLink></li>
-            <li> <h:commandLink action="formsCadastrarTeatros">Cadastrar Teatro</h:commandLink></li>
-            <li> <a href="">Login</a></li>
-          </ul>
-          </h:form> 
+          
         </nav>
     </div>
         
@@ -36,40 +30,38 @@ and open the template in the editor.
                 
         <h:form class="table">
             <h:dataTable id="promocao" 
-                         summary="Lista dos Teatros"
-                         value="#{listaPalpites.listaPalpites}"
+                         summary="Lista das Promocoes"
+                         value="#{promocaoBean.listaPromocoes}"
                          var="promocao"
                          class="thead">
                 <h:column >
                     <f:facet name="header" class="thead">
                         <h:outputText value="Peça"  class="thead-li"/>
                     </f:facet>
-                    <h:outputText id="idPalpiteiro" value="#{palpite.palpiteiro.id}" />
+                    <h:outputText id="nome_peca" value="#{promocao.nome_peca}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header" class="thead">
                         <h:outputText value="Link" class="thead-li" />
                     </f:facet>
-                    <h:outputText id="nomePalpiteiro" value="#{palpite.palpiteiro.nome}" />
+                    <h:outputText id="url" value="#{promocao.url}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header" class="thead">
                         <h:outputText value="Preço" class="thead-li"/>
                     </f:facet>
-                    <h:outputText id="campeao" value="#{palpite.campeao}" />
+                    <h:outputText id="preco" value="#{promocao.preco}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header" class="thead">
                         <h:outputText value="Data" class="thead-li"/>
                     </f:facet>
-                    <h:outputText id="vice" value="#{palpite.vice}" />
+                    <h:outputText id="Data" value="#{promocao.dia_hora}">
+                     <f:convertDateTime pattern="dd-MM-YYYY HH:MM" />
+                    </h:outputText>
+                   
                 </h:column>
-                <h:column>
-                    <f:facet name="header" class="thead">
-                        <h:outputText value="Horário" class="thead-li"/>
-                    </f:facet>
-                    <h:outputText id="horario" value="" />
-                </h:column>
+                
             </h:dataTable>  
         </h:form>
            

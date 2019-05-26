@@ -66,7 +66,7 @@ public class PromocaoBean implements Serializable {
     
      private List<Promocao> listaPromocoes;
 
-    public List<Promocao> getListaPromoces() {
+    public List<Promocao> getListaPromocoes() {
         return listaPromocoes;
     }
 
