@@ -21,7 +21,7 @@ public class PromocaoDAO extends GenericDAO<Promocao> {
     
     
     @Override
-    public Promocao get(Long id) {
+    public Promocao get(int id) {
         EntityManager em = this.getEntityManager();
         Promocao promocao = em.find(Promocao.class, id);
         em.close();
@@ -60,11 +60,16 @@ public class PromocaoDAO extends GenericDAO<Promocao> {
     @Override
     public void delete(Promocao promocao) {
         EntityManager em = this.getEntityManager();
-        EntityTransaction tx = em.getTransaction();
-        promocao = em.getReference(Promocao.class, promocao.getId());
+       /* EntityTransaction tx = em.getTransaction();
+        teatro = em.getReference(Teatro.class, teatro.getEmail());
         tx.begin();
-        em.remove(promocao);
-        tx.commit();
+        em.remove(teatro);
+        tx.commit();*/
+       
+        /*String s = "delete t ftom Teatro t where t,email = :nome";
+        TypedQuery<Teatro> q = em.createQuery(s, Teatro.class);
+        q.setParameter("nome", email); */
+        
     }
     
     public List<Promocao> getAllPorTeatro(String teatro) {

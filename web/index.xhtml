@@ -25,10 +25,15 @@
      <div class="layout-body">
 
      <h:form>
-            <h:commandLink action="#{teatroBean.verTodosTeatros()}">Ver Teatros</h:commandLink><br/>
+         <h:commandLink action="#{teatroBean.verTodosTeatros()}">Ver Teatros</h:commandLink><br/>
             <h:commandLink action="#{promocaoBean.verTodasPromocoes()}">Ver Promocoes</h:commandLink><br/><br/><br/>
-            <h:commandLink action="#{teatroBean.verTodosTeatros()}">CRUD TEATROS</h:commandLink><br/>
-            <h:commandLink action="#{siteBean.verTodosSites()}">CRUD SITES</h:commandLink><br/>
+           <!-- <h:commandLink action="#{teatroBean.verTodosTeatros()}">CRUD TEATROS</h:commandLink><br/> 
+            <h:commandLink action="#{siteBean.verTodosSites()}">CRUD SITES</h:commandLink><br/> -->
+            
+            <h:commandLink action="#{teatroBean.apresentaFormsDeleteTeatro()}">Deletar Teatro</h:commandLink><br/>
+            <h:commandLink action="#{teatroBean.cadastra()}">Editar Teatro</h:commandLink><br/>
+            <h:commandLink action="#{siteBean.apresentaFormsDelete()}">Deletar Site</h:commandLink><br/>
+            <h:commandLink action="#{siteBean.cadastra()}">Editar Site</h:commandLink><br/>
      </h:form>
 
        

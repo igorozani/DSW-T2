@@ -28,7 +28,7 @@ public class SiteBean implements Serializable {
     private Site site = new Site();
        
     public String lista() {
-        return "livro/index.xhtml";
+        return "index.xhtml";
     }
 
     public String cadastra() {
@@ -36,7 +36,8 @@ public class SiteBean implements Serializable {
         return "formsCadastrarSites.xhtml";
     }
 
-    public String edita(Long id) {
+    
+    public String edita(int id) {
         SiteDAO dao = new SiteDAO();
         site = dao.get(id);
         return "formsCadastrarSites.xhtml";

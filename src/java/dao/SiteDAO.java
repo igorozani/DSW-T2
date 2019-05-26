@@ -21,7 +21,7 @@ public class SiteDAO extends GenericDAO<Site>{
     
     
     @Override
-    public Site get(Long id) {
+    public Site get(int id) {
         EntityManager em = this.getEntityManager();
         Site site = em.find(Site.class, id);
         em.close();
@@ -57,14 +57,19 @@ public class SiteDAO extends GenericDAO<Site>{
         em.close();
     }
 
-    @Override
+   @Override
     public void delete(Site site) {
-        EntityManager em = this.getEntityManager();
-        EntityTransaction tx = em.getTransaction();
-        site = em.getReference(Site.class, site.getEmail());
+      /*  EntityManager em = this.getEntityManager();
+       EntityTransaction tx = em.getTransaction();
+        site = em.getReference(Teatro.class, teatro.getEmail());
         tx.begin();
         em.remove(site);
-        tx.commit();
+        tx.commit();*/
+       
+       /* String s = "delete t ftom Teatro t where t,email = :nome";
+        TypedQuery<Teatro> q = em.createQuery(s, Teatro.class);
+        q.setParameter("nome", email); */
+        
     }
     
    /* public List<Site> getAllPorCidade(String cidade) {

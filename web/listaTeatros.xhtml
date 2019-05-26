@@ -55,8 +55,7 @@
                 </h:column>
                  <h:column> 
                      <f:facet name="header"></f:facet>  
-                     <h:commandLink action="#{teatroBean.editaTeatro(teatro.id)}" value="Editar" >  
-                    </h:commandLink>  
+                     <h:commandButton id="edita" value="Edita" action="#{teatroBean.editaTeatro(teatro.id)}" />
                 </h:column>  
                 <h:column>  
                     <f:facet name="header"></f:facet>  

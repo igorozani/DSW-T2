@@ -19,7 +19,7 @@ import pojo.Teatro;
 public class TeatroDAO  extends GenericDAO<Teatro> {
  
     @Override
-    public Teatro get(Long id) {
+    public Teatro get(int id) {
         EntityManager em = this.getEntityManager();
         Teatro teatro = em.find(Teatro.class, id);
         em.close();
@@ -55,6 +55,7 @@ public class TeatroDAO  extends GenericDAO<Teatro> {
         em.close();
     }
 
+   
     @Override
     public void delete(Teatro teatro) {
         EntityManager em = this.getEntityManager();
@@ -63,6 +64,12 @@ public class TeatroDAO  extends GenericDAO<Teatro> {
         tx.begin();
         em.remove(teatro);
         tx.commit();
+       
+        /*String s = "delete t FROM Teatro t where t.email = :nome";
+        TypedQuery<Teatro> q = em.createQuery(s, Teatro.class);
+        q.setParameter("nome", email);*/
+        
+        
     }
     
     public List<Teatro> getAllPorCidade(String cidade) {

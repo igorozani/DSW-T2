@@ -23,22 +23,24 @@ import pojo.Teatro;
 public class TeatroBean implements Serializable {
     
     private Teatro teatro = new Teatro();
-       
-   /* public String lista() {
-        return "livro/index.xhtml";
-    }*/
+    private Teatro teatro_em_edicao;
+    
+    public String lista() {
+        return "listaTeatros";
+    }
 
     public String cadastra() {
        
         return "formsCadastrarTeatros.xhtml";
     }
 
-    public String editaTeatro(Long id) {
+    public String editaTeatro(int id) {
         TeatroDAO dao = new TeatroDAO();
         teatro = dao.get(id);
+           
         return "formsCadastrarTeatros.xhtml";
     }
-
+    
     public String salva() {
          TeatroDAO dao = new TeatroDAO();
         if (teatro.getId() == null) {
@@ -73,6 +75,10 @@ public class TeatroBean implements Serializable {
         TeatroDAO teatroDAO = new TeatroDAO();
         listaTeatros = teatroDAO.getAll();
         return "listaTeatros";
+    }
+    
+    public String apresentaFormsDeleteTeatro() throws SQLException {
+        return "formsDeleteTeatro.xhtml";
     }
     
     public String verTodosTeatros(String cidade) throws SQLException {
