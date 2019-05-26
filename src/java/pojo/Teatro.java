@@ -28,6 +28,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class Teatro implements Serializable{
     
+    
+    
     @Column(nullable = false, unique=true)
     private String email;
     
@@ -49,12 +51,12 @@ public class Teatro implements Serializable{
     @OneToMany(mappedBy = "teatro", fetch = FetchType.LAZY)
     private List<Promocao> promocoes;
     
-    public String getEmail() {return email;}
-    public String getSenha() {return senha;}
-    public String getCidade() {return cidade;}
-    public String getNome() {return nome;}
-    public String getCnpj() {return cnpj;}
-    public Integer getId() {return id;}
+    public String getEmail() {return this.email;}
+    public String getSenha() {return this.senha;}
+    public String getCidade() {return this.cidade;}
+    public String getNome() {return this.nome;}
+    public String getCnpj() {return this.cnpj;}
+    public Integer getId() {return this.id;}
     public List<Promocao> getPromocoes() {return promocoes;}
 
     public void setSenha(String senha) {this.senha = senha;}
@@ -64,5 +66,7 @@ public class Teatro implements Serializable{
     public void setCnpj(String cnpj) {this.cnpj = cnpj;}
     public void setId(Integer id) {this.id = id;}
     public void setPromocoes(List<Promocao> promocoes) {this.promocoes = promocoes;}
+    
+    
     
 }

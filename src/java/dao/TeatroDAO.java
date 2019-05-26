@@ -21,9 +21,9 @@ public class TeatroDAO  extends GenericDAO<Teatro> {
     @Override
     public Teatro get(Long id) {
         EntityManager em = this.getEntityManager();
-        Teatro palpite = em.find(Teatro.class, id);
+        Teatro teatro = em.find(Teatro.class, id);
         em.close();
-        return palpite;
+        return teatro;
     }
 
     @Override

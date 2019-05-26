@@ -13,9 +13,8 @@
         <nav>
           <h:form>  
           <ul>
-            <li> <a href="">Promoções</a></li>
-            <li> <h:commandLink action="formsCadastrarSites">Cadastrar Site</h:commandLink></li>
-            <li> <h:commandLink action="formsCadastrarTeatros">Cadastrar Teatro</h:commandLink></li>
+              <li> <h:commandLink action="#{listaTeatros.cadastra()}">Cadastrar Site</h:commandLink></li>
+            <li> <h:commandLink action="#{listaTeatros.cadastra()}">Cadastrar Teatro</h:commandLink></li>
             <li> <a href="">Login</a></li>
           </ul>
           </h:form> 
@@ -26,9 +25,9 @@
 
      <h:form>
             <h:commandLink action="#{listaTeatros.verTodosTeatros()}">Ver Teatros</h:commandLink><br/>
-            <h:commandLink action="#{listaPromocoes.verTodasPromocoes()}">Ver Promocoes</h:commandLink><br/>
-            <h:commandLink action="#{listaPalpites.verTodosPalpites()}">Ver todos os palpites</h:commandLink><br/>
-            <h:commandLink action="#{listaPalpites.verTodosPalpites('Palmeiras')}">Ver todos os palpites envolvendo o Palmeiras</h:commandLink><br/>
+            <h:commandLink action="#{listaPromocao.verTodasPromocoes()}">Ver Promocoes</h:commandLink><br/><br/><br/>
+            <h:commandLink action="#{listaPalpites.verTodosPalpites()}">CRUD TEATROS</h:commandLink><br/>
+            <h:commandLink action="#{listaPalpites.verTodosPalpites()}">CRUD SITES</h:commandLink><br/>
      </h:form>
 
        
