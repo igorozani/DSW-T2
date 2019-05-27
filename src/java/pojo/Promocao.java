@@ -6,6 +6,8 @@
 package pojo;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -47,6 +49,26 @@ public class Promocao implements Serializable{
     
     @Column(nullable = false, unique=false)
     private String cnpj;
+    private LocalDate dia;
+
+    /**
+     *
+     * @param url
+     * @param nome_peca
+     * @param preco
+     * @param dia_hora
+     * @param dia
+     * @param hora
+     * @param cnpj
+     */
+    public Promocao(String url, String nome_peca, Float preco, LocalDate dia_hora, String cnpj) {
+       
+     
+    }
+
+    public Promocao() {
+        
+    }
 
     public String getUrl() {return url;}
     public void setUrl(String url) {this.url = url;}

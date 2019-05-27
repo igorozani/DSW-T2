@@ -28,6 +28,16 @@ public class Usuario implements Serializable{
     @ManyToMany
     private List<Papel> papel;
 
+    public Usuario() {
+    }
+
+   
+    public Usuario(String email, String senha) {
+        
+    }
+
+    
+
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
 

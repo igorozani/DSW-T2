@@ -42,6 +42,15 @@ public class Site implements Serializable {
     
     @OneToMany(mappedBy = "site", fetch = FetchType.LAZY)
     private List<Promocao> promocoes;
+
+    public Site(String email, String senha, String url, String nome, Integer telefone) {
+        
+    }
+
+   
+    public Site() {
+       
+    }
     
     public Integer getId() {return id;}
     public String getEmail() {return email;}

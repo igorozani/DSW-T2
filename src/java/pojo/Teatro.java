@@ -50,6 +50,24 @@ public class Teatro implements Serializable{
     
     @OneToMany(mappedBy = "teatro", fetch = FetchType.LAZY)
     private List<Promocao> promocoes;
+
+    /**
+     *
+     * @param email
+     * @param senha
+     * @param cidade
+     * @param nome
+     * @param cnpj
+     */
+    public Teatro(String email, String senha, String cidade, String nome, String cnpj) {
+        
+    }
+
+    public Teatro() {
+       
+    }
+
+    
     
     public String getEmail() {return this.email;}
     public String getSenha() {return this.senha;}

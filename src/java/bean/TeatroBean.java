@@ -23,7 +23,11 @@ import pojo.Teatro;
 public class TeatroBean implements Serializable {
     
     private Teatro teatro = new Teatro();
-    private Teatro teatro_em_edicao;
+    
+    public TeatroBean(){
+    
+    }
+   // private Teatro teatro_em_edicao;
     
     public String lista() {
         return "listaTeatros";

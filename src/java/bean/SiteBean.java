@@ -63,6 +63,10 @@ public class SiteBean implements Serializable {
         return "index.xhtml?faces-redirect=true";
     }
     
+    public String apresentaFormsDeleteSite() throws SQLException {
+         return "formsDeleteSite.xhtml";
+    }
+    
     private List<Site> listaSites;
     
    public Site getSite(){
