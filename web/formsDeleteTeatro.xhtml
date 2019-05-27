@@ -1,68 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Sistema de Gerenciamento</title>
+        <title>#{msg['formsCadastraPromocoes.title']}</title>
         <h:outputStylesheet library="css" name="estilo.css"/>
     </h:head>
     <h:body>
     <div class="layout-body">
-        <h1>Deleta Teatro</h1>
+        <h1>#{msg['formsCadastraSites.header']}</h1>
            <div class="container1">
        
-            <h2><div class="container1head">Deleta Teatro</div></h2>
+            <h2><div class="container1head">#{msg['formsCadastraSites.adicionaSite']}</div></h2>
             
             <h:form>
                 
             <h:panelGrid columns="3">
-                Email:
-                <h:inputText id="email" label="Email" required="true" 
-                             value="#{teatroBean.teatro.email}" >
-                <f:validateRequired/>
-                </h:inputText>
+                #{msg['formsCadastraSite.email']}:
+                <h:inputText id="email" label="Nome" required="true" 
+                             value="#{siteBean.site.email}" />
                 <h:message for="nome"/> <br/>
-                Senha: 
-                <h:inputText id="senha" label="Senha" required="true" 
-                              
-                             value="#{teatroBean.teatro.senha}" >
-                <f:validateRequired/>
-                </h:inputText>
+
+                #{msg['formsCadastraSite.senha']}: 
+                <h:inputText id="senha" label="E-mail" required="true" 
+                             value="#{siteBean.site.senha}" />
                 <h:message for="email"/> <br/>
 
 
-                CNPJ:
-                <h:inputText id="cnpj" label="CNPJ" required="true" 
-                             value="#{teatroBean.teatro.cnpj}" >
-                <f:validateRequired/>
-                </h:inputText>
+                #{msg['formsCadastraPromocoes.url']}:
+                <h:inputText id="url" label="Telefone" required="true" 
+                             value="#{siteBean.site.url}" />
                 <h:message for="telefone"/> <br/>
 
-                Nome:
-                <h:inputText id="nome" label="Nome" required="true" 
-                             value="#{teatroBean.teatro.nome}" >
-                <f:validateRequired/>
-                </h:inputText>
+                #{msg['formsCadastraPromocoes.nome']}:
+                <h:inputText id="nome" label="Telefone" required="true" 
+                             value="#{siteBean.site.nome}" />
                 <h:message for="dataDeNascimento"/> <br/>
 
 
-                Cidade:
-                <h:inputText id="cidade" label="Cidade" required="true" 
-                             value="#{teatroBean.teatro.cidade}" >
-                <f:validateRequired/>
-                </h:inputText>
+                #{msg['formsCadastraSite.telefone']}:
+                <h:inputText id="telefone" label="Telefone" required="true" 
+                             value="#{siteBean.site.telefone}" />
                 <h:message for="dataDeNascimento"/> <br/>
-                
                 
             </h:panelGrid>
             <br/>
-            <h:commandButton  id="submit" value="Submit" action="#{teatroBean.delete(teatro)}" />
+            <h:commandButton id="submit" value="Submit" action="#{siteBean.salva()}" />
             </h:form>
             
             </div>   
@@ -71,3 +55,4 @@ and open the template in the editor.
         
     </h:body>
 </html>
+
