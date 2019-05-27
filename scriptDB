@@ -1,0 +1,19 @@
+INSERT INTO Teatro(email, senha, cidade, nome, cnpj) VALUES ('teatro1@email.com', '123456', 'Cidade1', 'Teatro Cidade 1', '111000001');
+INSERT INTO Teatro(email, senha, cidade, nome, cnpj) VALUES ('teatro2@email.com', '123456', 'Cidade2', 'Teatro Cidade 2', '111000002');
+INSERT INTO Teatro(email, senha, cidade, nome, cnpj) VALUES ('teatro3@email.com', '123456', 'Cidade3', 'Teatro Cidade 3', '111000003');
+INSERT INTO Teatro(email, senha, cidade, nome, cnpj) VALUES ('teatro4@email.com', '123456', 'Cidade4', 'Teatro Cidade 4', '111000004');
+INSERT INTO Teatro(email, senha, cidade, nome, cnpj) VALUES ('teatro5@email.com', '123456', 'Cidade5', 'Teatro Cidade 5', '111000005');
+
+
+INSERT INTO Site(email, senha, url, nome, telefone) VALUES ('site1@email.com', 'site1_pass', 'www.site1.com.br', 'site1', 33330001);
+INSERT INTO Site(email, senha, url, nome, telefone) VALUES ('site2@email.com', 'site2_pass', 'www.site2.com.br', 'site2', 33330002);
+INSERT INTO Site(email, senha, url, nome, telefone) VALUES ('site3@email.com', 'site3_pass', 'www.site3.com.br', 'site3', 33330003);
+INSERT INTO Site(email, senha, url, nome, telefone) VALUES ('site4@email.com', 'site4_pass', 'www.site4.com.br', 'site4', 33330004);
+INSERT INTO Site(email, senha, url, nome, telefone) VALUES ('site5@email.com', 'site5_pass', 'www.site5.com.br', 'site5', 33330005);
+
+
+INSERT INTO Promocao(url, nome, preco, dia, hora, cnpj) VALUES ('www.site1.com.br', 'promocao1' , 20.00, '09-02-2019 02:01', '111000001');
+INSERT INTO Promocao(url, nome, preco, dia, hora, cnpj) VALUES ('www.site2.com.br', 'promocao2' , 20.00, '09-03-2019 02:02', '111000002');
+INSERT INTO Promocao(url, nome, preco, dia, hora, cnpj) VALUES ('www.site3.com.br', 'promocao3' , 20.00, '09-04-2019 02:03', '111000003');
+INSERT INTO Promocao(url, nome, preco, dia, hora, cnpj) VALUES ('www.site4.com.br', 'promocao4' , 20.00, '09-05-2019 02:04', '111000004');
+INSERT INTO Promocao(url, nome, preco, dia, hora, cnpj) VALUES ('www.site5.com.br', 'promocao5' , 20.00, '09-06-2019 02:05', '111000005');
