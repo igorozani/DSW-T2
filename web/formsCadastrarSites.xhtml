@@ -4,42 +4,42 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Sistema de Gerenciamento</title>
+        <title>#{msg['formsCadastraPromocoes.title']}</title>
         <h:outputStylesheet library="css" name="estilo.css"/>
     </h:head>
     <h:body>
     <div class="layout-body">
-        <h1>Cadastro de Sites</h1>
+        <h1>#{msg['formsCadastraSites.header']}</h1>
            <div class="container1">
        
-            <h2><div class="container1head">Adicione Novo Site</div></h2>
+            <h2><div class="container1head">#{msg['formsCadastraSites.adicionaSite']}</div></h2>
             
             <h:form>
                 
             <h:panelGrid columns="3">
-                Email:
+                #{msg['formsCadastraSite.email']}:
                 <h:inputText id="email" label="Nome" required="true" 
                              value="#{siteBean.site.email}" />
                 <h:message for="nome"/> <br/>
 
-                Senha: 
+                #{msg['formsCadastraSite.senha']}: 
                 <h:inputText id="senha" label="E-mail" required="true" 
                              value="#{siteBean.site.senha}" />
                 <h:message for="email"/> <br/>
 
 
-                URL:
+                #{msg['formsCadastraPromocoes.url']}:
                 <h:inputText id="url" label="Telefone" required="true" 
                              value="#{siteBean.site.url}" />
                 <h:message for="telefone"/> <br/>
 
-                Nome:
+                #{msg['formsCadastraPromocoes.nome']}:
                 <h:inputText id="nome" label="Telefone" required="true" 
                              value="#{siteBean.site.nome}" />
                 <h:message for="dataDeNascimento"/> <br/>
 
 
-                Telefone:
+                #{msg['formsCadastraSite.telefone']}:
                 <h:inputText id="telefone" label="Telefone" required="true" 
                              value="#{siteBean.site.telefone}" />
                 <h:message for="dataDeNascimento"/> <br/>
