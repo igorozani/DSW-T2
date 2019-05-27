@@ -9,12 +9,12 @@ and open the template in the editor.
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-            <title>Sistema de Gerenciamento</title>
+            <title>#{msg['formsCadastraPromocoes.title']}</title>
         <h:outputStylesheet library="css" name="estilo.css"/>
     </h:head>
     <h:body>
     <div class="div-header">
-        <h1>Gerenciamento de Sites e Teatros</h1>
+        <h1>#{msg['formsIndex.header']}</h1>
         <nav>
           
         </nav>
@@ -23,9 +23,9 @@ and open the template in the editor.
      <div class="layout-body">
 
          <div class="container-esquerdo-principal">
-        <h2><a>Promoções</a></h2>
+        <h2><a>#{msg['forms.promocoes']}</a></h2>
         
-        Filtrar por teatro
+        #{msg['forms.filtrarTeatro']}
        
                 
         <h:form class="table">
